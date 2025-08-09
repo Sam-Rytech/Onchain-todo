@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ethers } from 'ethers'
-import TaskItem from '../components/TaskItem'
+import TaskItem from '../frontend/components/TaskItem'
 import contractData from '../lib/TodoList.json'
 
 export default function Home() {
