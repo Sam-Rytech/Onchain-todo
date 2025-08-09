@@ -35,12 +35,3 @@ Before starting, make sure you have:
 5. Deploy the contract.  
 6. Copy the deployed **contract address**.  
 7. Export the contract ABI from Remix and save it in `frontend/lib/TodoList.json`.  
-
----
-
-## 💻 Frontend Setup
-
-1. Navigate to the frontend folder:
-   ```sh
-   cd frontend
-   npm install
