@@ -72,4 +72,21 @@ export default function Home() {
       await tx.wait()
       loadTasks()
     }
+
+    return (
+        <div>
+            <h1>Onchain Todo List</h1>
+            {account ? (
+                <>
+                    <div>
+                        <input placeholder='New Task' />
+                        <button>Add</button>
+                    </div>
+                    {tasks.map((task) => (
+                        <TaskItem/>
+                    ))}
+                </>
+            )}
+        </div>
+    );
 }
