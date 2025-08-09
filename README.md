@@ -5,32 +5,6 @@ Users can **add tasks, mark them complete, and view them** — all stored **on-c
 
 ---
 
-## 📂 Folder Structure
-
-onchain-todo/
-├─ contracts/
-│  └─ TodoList.sol                  # Solidity smart contract
-├─ frontend/
-│  ├─ package.json                   # Frontend dependencies
-│  ├─ next.config.js                 # Next.js configuration
-│  ├─ tailwind.config.js             # Tailwind CSS configuration
-│  ├─ postcss.config.js              # PostCSS configuration
-│  ├─ pages/
-│  │  ├─ _app.js                     # Global app setup
-│  │  └─ index.js                    # Main TodoList UI
-│  ├─ components/
-│  │  └─ TaskItem.js                 # Task display component
-│  ├─ public/
-│  │  └─ favicon.ico
-│  └─ lib/
-│     └─ TodoList.json               # Contract ABI
-├─ .env.example                      # Example environment variables
-└─ README.md
-
-
-
----
-
 ## 🚀 Features
 
 - **On-chain storage** for tasks  
