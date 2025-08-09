@@ -8,5 +8,5 @@ export default function Home() {
     const [input, setInput] = useState('')
     const [account, setAccount] = useState('')
 
-    const contractAddress = 'YOUR_DEPLOYED_CONTRACT_ADDRESS'
+    const contractAddress = '0x85Ca267e9e6eFFC274F4D29665DaA0926f9aC8b6'
 }
