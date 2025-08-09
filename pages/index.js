@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 import { ethers } from 'ethers'
 import TaskItem from '../frontend/components/TaskItem'
-import contractData from '../lib/TodoList.json'
+import contractData from '../frontend/lib/TodoList.json'
 
 export default function Home() {
   const [tasks, setTasks] = useState([])
   const [input, setInput] = useState('')
   const [account, setAccount] = useState('')
 
-  const contractAddress = 'YOUR_DEPLOYED_CONTRACT_ADDRESS' // Replace after Remix deployment
+  const contractAddress = '0xbC71d153063D16f07b4D80B7Eb5200b4c9c2dB0c'
 
   useEffect(() => {
     loadTasks()
