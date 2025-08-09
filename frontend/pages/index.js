@@ -9,4 +9,17 @@ export default function Home() {
     const [account, setAccount] = useState('')
 
     const contractAddress = '0x85Ca267e9e6eFFC274F4D29665DaA0926f9aC8b6'
+
+    useEffect(() => {
+      loadTasks()
+    }, [])
+
+    async function connectWallet() {
+      if (window.ethereum) {
+        const accounts = await window.ethereum.request({
+          method: 'eth_requestAccounts',
+        })
+        setAccount(accounts[0])
+      }
+    }
 }
