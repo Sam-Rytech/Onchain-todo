@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Onchain TodoList ✅
 
-## Getting Started
+A **Web3-inspired TodoList dApp** built with Solidity smart contracts and a modern Next.js + Tailwind CSS frontend.  
+Users can **add tasks, mark them complete, and view them** — all stored **on-chain** for transparency and decentralization.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📂 Folder Structure
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+onchain-todo/
+├─ contracts/
+│ └─ TodoList.sol # Solidity smart contract
+├─ frontend/
+│ ├─ package.json # Frontend dependencies
+│ ├─ next.config.js # Next.js configuration
+│ ├─ tailwind.config.js # Tailwind CSS configuration
+│ ├─ postcss.config.js # PostCSS configuration
+│ ├─ pages/
+│ │ ├─ _app.js # Global app setup
+│ │ └─ index.js # Main TodoList UI
+│ ├─ components/
+│ │ └─ TaskItem.js # Task display component
+│ ├─ public/
+│ │ └─ favicon.ico
+│ └─ lib/
+│ └─ TodoList.json # Contract ABI
+├─ .env.example # Example environment variables
+└─ README.md
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Features
 
-To learn more about Next.js, take a look at the following resources:
+- **On-chain storage** for tasks  
+- **Add, complete, and fetch tasks** directly from the blockchain  
+- **Wallet connection** using MetaMask  
+- **Modern UI** with Tailwind CSS  
+- **Ethers.js** for Web3 interactions  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Prerequisites
 
-## Deploy on Vercel
+Before starting, make sure you have:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Node.js** >= 16.x installed  
+- **MetaMask** browser extension  
+- **Remix IDE** (https://remix.ethereum.org)  
+- **Base Sepolia / Sepolia ETH testnet funds** for testing  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📜 Smart Contract Deployment (Remix)
+
+1. Open [Remix IDE](https://remix.ethereum.org)  
+2. Create a file in `contracts/TodoList.sol` and paste your smart contract code.  
+3. Compile the contract with Solidity version `0.8.x`.  
+4. Connect Remix to **MetaMask** and select **Base Sepolia / Sepolia Testnet**.  
+5. Deploy the contract.  
+6. Copy the deployed **contract address**.  
+7. Export the contract ABI from Remix and save it in `frontend/lib/TodoList.json`.  
+
+---
+
+## 💻 Frontend Setup
+
+1. Navigate to the frontend folder:
+   ```sh
+   cd frontend
+   npm install
