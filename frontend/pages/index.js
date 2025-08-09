@@ -44,4 +44,19 @@ export default function Home() {
       }
       setTasks(loadedTasks)
     }
+
+    async function addTask() {
+      if (!input) return
+      const provider = new ethers.BrowserProvider(window.ethereum)
+      const signer = await provider.getSigner()
+      const contract = new ethers.Contract(
+        contractAddress,
+        contractData.abi,
+        signer
+      )
+      const tx = await contract.createTask(input)
+      await tx.wait()
+      setInput('')
+      loadTasks()
+    }
 }
