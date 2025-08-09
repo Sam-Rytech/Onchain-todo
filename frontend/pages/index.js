@@ -22,4 +22,26 @@ export default function Home() {
         setAccount(accounts[0])
       }
     }
+
+    async function loadTasks() {
+      if (!window.ethereum) return
+      const provider = new ethers.BrowserProvider(window.ethereum)
+      const contract = new ethers.Contract(
+        contractAddress,
+        contractData.abi,
+        provider
+      )
+
+      let loadedTasks = []
+      const taskCount = await contract.taskCount()
+      for (let i = 1; i <= taskCount; i++) {
+        const task = await contract.getTask(i)
+        loadedTasks.push({
+          id: task[0],
+          content: task[1],
+          completed: task[2],
+        })
+      }
+      setTasks(loadedTasks)
+    }
 }
